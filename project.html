@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+
+        }
+
+        .btn {
+            background-color: black;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 26px;
+            cursor: pointer;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 16px;
+            border: 1px solid lightgray;
+            font-size: 17px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid tomato;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Convert USD to INR</h1>
+        <p>This is a jsvascript project. Enter the value in INR and hut the convert button to get the conversion value!
+        </p>
+        <h3 id="result"></h3>
+        <input type="text" id="usd" placeholder="Enter USD">
+        <button class="btn" onclick="usdToInr()">Convert to INR</button>
+    </div>
+    
+
+
+    <script>
+        function usdToInr() {
+            let usd = document.getElementById('usd').value;
+            let result = (usd * 81.52);
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
